@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body style="padding-bottom: 60px;">
+  <a style="bottom: 96px;" href="chat-iris.html" class="chatButton">Chat</a>
+  <div id="sidePanel" class="sidePanelStyle">
+    <div>
+      <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+      <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+  </div>
+    <a href="index.html">Home</a>
+    <a href="package.html">Packages</a>
+    <a href="vendor.html" class="activeNav">Vendors</a>
+    <a href="inspo.html">Inspirations</a>
+    <a href="profile.html">My Account</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="tnc.html">Help</a>
+    <a href="signUp.html">Sign Up</a>
+</div>
+
+<div id="myOverlay" class="overlay">
+  <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+  <div style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" class="overlay-content">
+      <form style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" action="inspo.html">
+          <a href="inspo.html">
+              <button style="text-align: center;" type="button"><i class="fa fa-search"></i></button>
+          </a>
+          <input style="margin: 0;" type="text" placeholder="Search.." name="search">
+      </form>
+      <div style="clear: both;"></div>
+  </div>
+  <div class="recently">Recently Searched</div>
+  <a href="inspo.html" class="recentlySearched">Venue</a>
+  <a href="inspo.html" class="recentlySearched">Wedding Inspiration</a>
+  <a href="inspo.html" class="recentlySearched">What is a good wedding dress</a>
+  <a href="inspo.html" class="recentlySearched">Best entertainment</a>
+</div>
+
+<div class="navbar">
+  <a class="openButton" onclick="openNav()">☰</a>
+  <div class="rightDiv">
+    <div class="brand">IRIS WEDDING</div>
+      <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+      <a href="invoices.html">
+          <img src="img/credit.svg" height="26">
+      </a>
+  </div>
+</div>
+    <div class="profile">
+        <img src="img/1.jpg">
+        <div class="description">Wedding Organizer Package
+        <div class="secondary-text ">Full day wedding planner</div>
+    </div>
+</div>
+<!-- Container for the image gallery -->
+<div class="container">
+
+<!-- Full-width images with number text -->
+<div class="mySlides">
+  <div class="numbertext"></div>
+    <img src="img/expand1.jfif" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext"></div>
+    <img src="img/expand2.avif" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext"></div>
+    <img src="img/expand3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext"></div>
+    <img src="img/expand4.jpg" style="width:100%">
+</div>
+<div class="mySlides">
+  <div class="numbertext"></div>
+    <img src="img/expand5.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext"></div>
+    <img src="img/expand6.jpg" style="width:100%">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext"></div>
+    <img src="img/expand7.jpg" style="width:100%">
+</div>
+
+<!-- Next and previous buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<!-- Image text 
+*/<div class="caption-container">
+  <p id="caption"></p>
+</div>-->
+
+<!-- Thumbnail images -->
+<div class="row">
+  <div class="column">
+    <img class="demo cursor" src="img/expand1.jfif" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="img/expand2.avif" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="img/expand3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="img/expand4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="img/expand5.jpg" style="width:100%" onclick="currentSlide(5)" alt="The Woods">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="img/expand6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cinque Terre">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="img/expand7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Mountains and fjords">
+  </div></div>
+  
+    <div class="under">
+        <div class="detail">Details</div>
+        <div class="toggle-image">
+        <svg style="margin: 0;" onclick="toggleFill(this)" width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="black" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="square">
+        <div class="rectangle">
+            <p class="label">Price</p>
+            <div class="price">17.000k</div>
+            <hr class="divider">
+            <p class="label">Capacity</p>
+            <div class="pc">250 pax</div>
+        </div>   
+    </div>
+    
+    
+    <div class="items">
+        <div class="detail">Package include</div>
+
+        <div class="parag">
+            <p>
+                •Discuss wedding packages<br>
+                •Communicate with clients about details <br>
+                •Schedule meetings <br>
+                •Contracts negotiation<br>
+                •Creating checklist and timeline<br>
+                •Create rundown for the wedding day.<br>
+                <span id="dots">...</span>
+                <span id="more" style="display: none;">
+                    •10 crew will be stand by<br>
+                    •Assist bride and groom and both family in morning preparation.<br>
+                    •Manage time keeping and checklist for holy matrimony, family photo taking, custom tradition, make up, etc.
+                </span>
+            </p></div>
+            <div class="button-container">
+                <button id="readMoreBtn" class="read-more-btn">Read More</button>
+            </div>
+        </div>
+
+<hr class="divider">
+<div class="tex">
+        <p>Attachments</p>
+    </div>
+<div class="donlod">
+    <a href="img/brosur iris-2024_2025.pdf" download>
+        <img src="img/EACH PACKAGE.png" alt="Download Image">
+    </a>
+</div>  
+</div>
+
+
+
+<footer>
+  <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+  <br>
+  <a>Products</a>
+  <a>About Us</a>
+  <a>Help</a>
+  <a>Contact</a>
+      <br><br>
+  <a>Privacy & Cookies</a>
+  <a>Cookies Settings</a>
+  <a href="tnc.html">Terms & Conditions</a>
+      <br><br>
+  <p>© 2024 IrisWedding.com</p>
+</footer>
+</div>
+<div class="footer">
+    <div class="favo" onclick="openFavForm()">
+        <p>Add to Fav</p>
+    </div>
+    <div class="white">
+    </div>
+    <div class="cart" onclick="openCartForm()">
+        <p>Add to Cart</p>
+    </div>
+</div></div>
+
+<div style="align-items: center; justify-content: center;" class="form-popup" id="favForm">
+  <form style="font-family: descFont;" action="/favorite_action" class="form-container">
+    <h1 style="font-size: 24px; padding-top: 16px;">Added to Favorites</h1>
+    <p style="font-size: 16px; padding-bottom: 16px; padding-top: 8px;">Thank you for adding to your favorite!</p>
+    <button type="button" class="btn cancel" onclick="closeFavForm()">Ok</button>
+  </form>
+</div>
+
+<div style="align-items: center; justify-content: center;" class="form-popup" id="cartForm">
+  <form style="font-family: descFont;" action="/cart_action" class="form-container">
+    <h1 style="font-size: 24px; padding-top: 16px;">Added to Cart</h1>
+    <p style="font-size: 16px; padding-bottom: 16px; padding-top: 8px;">Thank you for adding to your cart!</p>
+    <button style="width: 80vw;" type="button" class="btn cancel" onclick="closeCartForm()">Ok</button>
+  </form>
+</div>
+
+    <script src="app.js"></script>
+    <script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+      </script>
+
+<script>
+    document.getElementById("readMoreBtn").addEventListener("click", function() {
+        let dots = document.getElementById("dots");
+        let moreText = document.getElementById("more");
+        
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            moreText.style.display = "none";
+            this.textContent = "Read More";
+        } else {
+            dots.style.display = "none";
+            moreText.style.display = "inline";
+            this.textContent = "Read Less";
+        }
+    });
+</script>
+<script>
+  let mybutton = document.getElementById("myBtn");
+
+  function topFunction() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+
+  function openNav() {
+    document.getElementById("sidePanel").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("sidePanel").style.width = "0";
+  }
+
+  function openSearch() {
+document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+document.getElementById("myOverlay").style.display = "none";
+}
+
+function openFavForm() {
+  document.getElementById("favForm").style.display = "flex";
+}
+
+function closeFavForm() {
+  document.getElementById("favForm").style.display = "none";
+}
+
+function openCartForm() {
+  document.getElementById("cartForm").style.display = "flex";
+}
+
+function closeCartForm() {
+  document.getElementById("cartForm").style.display = "none";
+}
+
+</script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iris Wedding Mobile Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body style="background-color: #F8F8FF;">
+  <a href="chat-iris.html" class="chatButton">Chat</a>
+    <div id="sidePanel" class="sidePanelStyle">
+      <div>
+        <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+    </div>
+      <a href="index.html">Home</a>
+      <a href="package.html">Packages</a>
+      <a href="vendor.html">Vendors</a>
+      <a href="inspo.html">Inspirations</a>
+      <a href="profile.html" class="activeNav">My Account</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="tnc.html">Help</a>
+      <a href="signUp.html">Sign Up</a>
+  </div>
+
+  <div id="myOverlay" class="overlay">
+    <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+    <div style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" class="overlay-content">
+        <form style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" action="inspo.html">
+            <a href="inspo.html">
+                <button style="text-align: center;" type="button"><i class="fa fa-search"></i></button>
+            </a>
+            <input style="margin: 0;" type="text" placeholder="Search.." name="search">
+        </form>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="recently">Recently Searched</div>
+    <a href="inspo.html" class="recentlySearched">Venue</a>
+    <a href="inspo.html" class="recentlySearched">Wedding Inspiration</a>
+    <a href="inspo.html" class="recentlySearched">What is a good wedding dress</a>
+    <a href="inspo.html" class="recentlySearched">Best entertainment</a>
+</div>
+
+<div class="navbar">
+    <a class="openButton" onclick="openNav()">☰</a>
+    <div class="rightDiv">
+      <div class="brand">IRIS WEDDING</div>
+        <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+        <a href="invoices.html">
+            <img src="img/credit.svg" height="26">
+        </a>
+    </div>
+  </div>
+  
+  </head>
+  
+</div>
+
+      <div class="headere">
+        <div class="profile-container">
+          <div style="background-image: url(img/avatar.png);" class="profile-pic"></div>
+          <div class="info">
+            <h2>Sophia Sanya</h2>
+            <p>Jakarta, Indonesia</p>
+          </div>
+        </div>
+      </div>
+      <ul style="padding-bottom: 30%;" class="menu">
+        <li>
+          <a href="edit-profile.html">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              ></path>
+            </svg>
+            <span>Account</span>
+          </a>
+        </li>
+        <li>
+          <a href="favorite.html">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              ></path>
+            </svg>
+            <span>Favorites</span>
+          </a>
+        </li>
+        <li>
+          <a href="invoices.html">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M21 7h-2V3H5v4H3v2h2v10H3v2h18v-2h-2V9h2V7zm-4 10H7V9h10v8z"
+              ></path>
+            </svg>
+            <span>Total payment</span>
+          </a>
+        </li>
+        <li>
+          <a href="tnc.html">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M6 2h12c1.1 0 2 .9 2 2v16c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2zm0 2v16h12V4H6zm2 2h8v2H8V6zm0 4h8v2H8v-2zm0 4h8v2H8v-2z"
+              ></path>
+            </svg>
+            <span>Terms and condition</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <footer>
+      <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+      <br>
+      <a>Products</a>
+      <a>About Us</a>
+      <a>Help</a>
+      <a>Contact</a>
+          <br><br>
+      <a>Privacy & Cookies</a>
+      <a>Cookies Settings</a>
+      <a href="tnc.html">Terms & Conditions</a>
+          <br><br>
+      <p>© 2024 IrisWedding.com</p>
+  </footer>
+
+    <script>
+      let mybutton = document.getElementById("myBtn");
+  
+      function topFunction() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      }
+  
+      function openNav() {
+        document.getElementById("sidePanel").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("sidePanel").style.width = "0";
+      }
+  
+      function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+  <script src="script.js"></script>
+  </body>
+</html>

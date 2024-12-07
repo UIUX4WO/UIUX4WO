@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iris Wedding Mobile Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+
+<body>
+
+  <div id="sidePanel" class="sidePanelStyle">
+    <div>
+      <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+      <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+  </div>
+    <a href="index.html">Home</a>
+    <a href="package.html">Packages</a>
+    <a href="vendor.html">Vendors</a>
+    <a href="inspo.html">Inspirations</a>
+    <a href="profile.html">My Account</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="tnc.html">Help</a>
+    <a href="signUp.html" class="activeNav">Sign Up</a>
+</div>
+
+
+<div id="myOverlay" class="overlay">
+  <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+  <div style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" class="overlay-content">
+      <form style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" action="inspo.html">
+          <a href="inspo.html">
+              <button style="text-align: center;" type="button"><i class="fa fa-search"></i></button>
+          </a>
+          <input style="margin: 0;" type="text" placeholder="Search.." name="search">
+      </form>
+      <div style="clear: both;"></div>
+  </div>
+  <div class="recently">Recently Searched</div>
+  <a href="inspo.html" class="recentlySearched">Venue</a>
+  <a href="inspo.html" class="recentlySearched">Wedding Inspiration</a>
+  <a href="inspo.html" class="recentlySearched">What is a good wedding dress</a>
+  <a href="inspo.html" class="recentlySearched">Best entertainment</a>
+</div>
+
+<div class="navbar">
+  <a class="openButton" onclick="openNav()">☰</a>
+  <div class="rightDiv">
+    <div class="brand">IRIS WEDDING</div>
+      <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+      <a href="invoices.html">
+          <img src="img/credit.svg" height="26">
+      </a>
+  </div>
+</div>
+
+
+<form style="margin: 0; padding: 32px 16px;" action="/action_page.php">
+    <div class="container">
+      <h1 style="text-align: center; color:#FF5447;     font-size: 32px;">Sign Up</h1>
+      <p style="text-align: center; padding-top: 8px;">Create your Account</p>
+
+      <br><br>
+ 
+      <div id="notification3" class="notification">*You have to fill this field.</div>
+      <input type="text" placeholder="Enter Name" name="name" id="name" required>
+ 
+      <div id="notification4" class="notification">*You have to fill this field.</div>
+      <input type="text" placeholder="Enter Email" name="email" id="emailIn" required>
+ 
+      <div id="notification5" class="notification">*You have to fill this field.</div>
+      <input type="password" placeholder="Enter Password" name="psw" id="pswIn" required>
+ 
+      <div id="notification6" class="notification">*You have to fill this field.</div>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="pswRepeat" required>
+ 
+      <p><a class="underlined" href="#">Forgot password?</a></p>
+ 
+      <br><br>
+
+      <div class="registerbtn">
+        <a style="font-family: descFont; display: block; width: 100%;" id="submitButtonSignUp" href="index.html" >Sign Up</a>
+      </div>
+      <p class="container signin">or</p>
+
+      <div style=" justify-items: center; justify-content:center ; align-items: center; align-content: center; justify-self: center; align-self: center; margin-top: 32px; margin-bottom: 16px;">
+        <a href="index.html"><img style="width: 40vw;" src="img/socmed.png"></a>
+        </div>
+     
+      <p class="container signin">Already have an account? <a style="    cursor: pointer;" class="underlined" href="signIn.html">Sign in</a></p>
+    </div>
+</form>
+
+
+<footer>
+  <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+  <br>
+  <a>Products</a>
+  <a>About Us</a>
+  <a>Help</a>
+  <a>Contact</a>
+      <br><br>
+  <a>Privacy & Cookies</a>
+  <a>Cookies Settings</a>
+  <a href="tnc.html">Terms & Conditions</a>
+      <br><br>
+  <p>© 2024 IrisWedding.com</p>
+</footer>
+
+
+<script>
+    let mybutton = document.getElementById("myBtn");
+
+    function topFunction() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    document.getElementById("submitButtonSignUp").onclick = function (event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const emailIn = document.getElementById("emailIn").value;
+            const pswIn = document.getElementById("pswIn").value;
+            const pswRepeat = document.getElementById("pswRepeat").value;
+
+            const notification3 = document.getElementById("notification3");
+            const notification4 = document.getElementById("notification4");
+            const notification5 = document.getElementById("notification5");
+            const notification6 = document.getElementById("notification6");
+
+            notification3.style.display = "none";
+            notification4.style.display = "none";
+            notification5.style.display = "none";
+            notification6.style.display = "none";
+
+            if (name.trim() === "" && emailIn.trim() === "" && pswIn.trim() === "" && pswRepeat.trim() === "") {
+              notification3.style.display = "block";
+              notification4.style.display = "block";
+              notification5.style.display = "block";
+              notification6.style.display = "block";
+            } else if (name.trim() === "" && emailIn.trim() === "" && pswIn.trim() === "") {
+              notification3.style.display = "block";
+              notification4.style.display = "block";
+              notification5.style.display = "block";
+            } else if (emailIn.trim() === "" && pswIn.trim() === "" && pswRepeat.trim() === "") {
+              notification4.style.display = "block";
+              notification5.style.display = "block";
+              notification6.style.display = "block";
+            } else if (name.trim() === "" && pswIn.trim() === "" && pswRepeat.trim() === "") {
+              notification3.style.display = "block";
+              notification5.style.display = "block";
+              notification6.style.display = "block";
+            } else if (name.trim() === "" && emailIn.trim() === "" && pswRepeat.trim() === "") {
+              notification3.style.display = "block";
+              notification4.style.display = "block";
+              notification6.style.display = "block";
+            } else if (name.trim() === "" && emailIn.trim() === "") {
+              notification3.style.display = "block";
+              notification4.style.display = "block";
+            } else if (emailIn.trim() === "" && pswIn.trim() === "") {
+              notification4.style.display = "block";
+              notification5.style.display = "block";
+            } else if (pswIn.trim() === "" && pswRepeat.trim() === "") {
+              notification5.style.display = "block";
+              notification6.style.display = "block";
+            } else if (name.trim() === "" && pswRepeat.trim() === "") {
+              notification3.style.display = "block";
+              notification6.style.display = "block";
+            } else if (name.trim() === "" && pswIn.trim() === "") {
+              notification3.style.display = "block";
+              notification5.style.display = "block";
+            } else if (emailIn.trim() === "" && pswRepeat.trim() === "") {
+              notification4.style.display = "block";
+              notification6.style.display = "block";
+            } else if (name.trim() === "") {
+              notification3.style.display = "block";
+            } else if (emailIn.trim() === "") {
+              notification4.style.display = "block";
+            } else if (pswIn.trim() === "") {
+              notification5.style.display = "block";
+            } else if (pswRepeat.trim() === "") {
+              notification6.style.display = "block";
+            } else {
+                window.location.href = "index.html";
+            }
+        }
+
+    function openNav() {
+      document.getElementById("sidePanel").style.width = "100%";
+    }
+   
+    function closeNav() {
+      document.getElementById("sidePanel").style.width = "0";
+    }
+
+
+    function openSearch() {
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+
+function closeSearch() {
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+<script src="script.js"></script>
+
+</body>
+
+
+</html>

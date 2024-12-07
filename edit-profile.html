@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iris Wedding Mobile Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <a href="chat-iris.html" class="chatButton">Chat</a>
+
+<div id="sidePanel" class="sidePanelStyle">
+  <div>
+    <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+    <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+</div>
+    <a href="index.html">Home</a>
+    <a href="package.html">Packages</a>
+    <a href="vendor.html">Vendors</a>
+    <a href="inspo.html">Inspirations</a>
+    <a href="profile.html" class="activeNav">My Account</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="tnc.html">Help</a>
+    <a href="signUp.html">Sign Up</a>
+</div>
+
+<div id="myOverlay" class="overlay">
+  <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+  <div style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" class="overlay-content">
+      <form style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" action="inspo.html">
+          <a href="inspo.html">
+              <button style="text-align: center;" type="button"><i class="fa fa-search"></i></button>
+          </a>
+          <input style="margin: 0;" type="text" placeholder="Search.." name="search">
+      </form>
+      <div style="clear: both;"></div>
+  </div>
+  <div class="recently">Recently Searched</div>
+  <a href="inspo.html" class="recentlySearched">Venue</a>
+  <a href="inspo.html" class="recentlySearched">Wedding Inspiration</a>
+  <a href="inspo.html" class="recentlySearched">What is a good wedding dress</a>
+  <a href="inspo.html" class="recentlySearched">Best entertainment</a>
+</div>
+
+<div class="navbar">
+  <a class="openButton" onclick="openNav()">☰</a>
+  <div class="rightDiv">
+    <div class="brand">IRIS WEDDING</div>
+      <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+      <a href="invoices.html">
+          <img src="img/credit.svg" height="26">
+      </a>
+  </div>
+</div>
+    <style>
+      @font-face {
+        font-family: Arcon;
+        src: url(Arcon-Regular.otf);
+      }
+
+      * {
+        font-family: Arcon;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .header {
+        position: relative;
+        background-image: url("img/header.png");
+        background-size: cover;
+        background-position: center;
+        height: 160px;
+      }
+
+      .profile-container {
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: #ffffff;
+        opacity: 80%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .profile-pic {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: url("img/avatar.png");
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .info {
+        text-align: center;
+        padding: 60px 20px 20px;
+      }
+
+      .menu {
+        padding-top: 120px;
+        padding-inline: 20px;
+        list-style: none;
+        margin: 0;
+        flex: 1;
+      }
+
+      .menu li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        border-top: 1px solid #eeeeee;
+      }
+
+      .menu li:first-child {
+        border-top: none;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .item p {
+        font-size: 12px;
+        color: #888888;
+      }
+
+      .item span,
+      .item input {
+        font-size: 16px;
+        color: #444444;
+        font-weight: 500;
+      }
+
+      .item input {
+        border: 1px solid #ddd;
+        padding: 8px;
+        border-radius: 4px;
+        width: 100%; /* Fix: Ensuring proper input width */
+        background-color: #fafafa;
+      }
+
+      .item input:focus {
+        outline: none;
+        border-color: #471f61;
+      }
+
+    </style>
+
+
+    <div class="header">
+        <div class="profile-container">
+            <div class="profile-pic"></div>
+            <div class="info">
+                <h2>Sophia Sanya</h2>
+                <p>Jakarta, Indonesia</p>
+            </div>
+        </div>
+    </div>
+
+    <ul class="menu">
+        <li>
+            <div class="item">
+                <p>Display Name</p>
+                <input type="text" value="Sophia Sanya" id="display-name" />
+            </div>
+            <svg width="10" height="18" viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9.12598L1 17" stroke="#471F61" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+        </li>
+        <li>
+            <div class="item">
+                <p>Location</p>
+                <input type="text" value="Jakarta, Indonesia" id="location" />
+            </div>
+            <svg width="10" height="18" viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9.12598L1 17" stroke="#471F61" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+        </li>
+        <li>
+            <div class="item">
+                <p>Phone Number</p>
+                <input type="text" value="+6212345678" id="phone" />
+            </div>
+            <svg width="10" height="18" viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9.12598L1 17" stroke="#471F61" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+        </li>
+        <li>
+            <div class="item">
+                <p>Email</p>
+                <input type="email" value="sophia.sanya@gmail.com" id="email" />
+            </div>
+            <svg width="10" height="18" viewBox="0 0 10 18" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9.12598L1 17" stroke="#471F61" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+        </li>
+        <li>
+            <a style="font-family: descFont; color: #362B2B;" href="index.html">Log out</a>
+        </li>
+    </ul>
+<br><br><br><br>
+<footer>
+  <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+  <br>
+  <a>Products</a>
+  <a>About Us</a>
+  <a>Help</a>
+  <a>Contact</a>
+      <br><br>
+  <a>Privacy & Cookies</a>
+  <a>Cookies Settings</a>
+  <a href="tnc.html">Terms & Conditions</a>
+      <br><br>
+  <p>© 2024 IrisWedding.com</p>
+</footer>
+  
+  <script>
+      let mybutton = document.getElementById("myBtn");
+  
+      function topFunction() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      }
+  
+      function openNav() {
+        document.getElementById("sidePanel").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("sidePanel").style.width = "0";
+      }
+  
+      function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+  <script src="script.js"></script>
+  </body>
+  
+  </html>

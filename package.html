@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iris Wedding Mobile Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body>
+    <a href="chat-iris.html" class="chatButton">Chat</a>
+    <div id="sidePanel" class="sidePanelStyle">
+        <div>
+            <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+            <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="package.html" class="activeNav">Packages</a>
+        <a href="vendor.html">Vendors</a>
+        <a href="inspo.html">Inspirations</a>
+        <a href="profile.html">My Account</a>
+        <a href="FAQ.html">FAQ</a>
+        <a href="tnc.html">Help</a>
+        <a href="signUp.html">Sign Up</a>
+    </div>
+
+    <div id="myOverlay" class="overlay">
+        <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+        <div style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" class="overlay-content">
+            <form style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" action="inspo.html">
+                <a href="inspo.html">
+                    <button style="text-align: center;" type="button"><i class="fa fa-search"></i></button>
+                </a>
+                <input style="margin: 0;" type="text" placeholder="Search.." name="search">
+            </form>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="recently">Recently Searched</div>
+        <a href="inspo.html" class="recentlySearched">Venue</a>
+        <a href="inspo.html" class="recentlySearched">Wedding Inspiration</a>
+        <a href="inspo.html" class="recentlySearched">What is a good wedding dress</a>
+        <a href="inspo.html" class="recentlySearched">Best entertainment</a>
+    </div>
+    
+    <div class="navbar">
+        <a class="openButton" onclick="openNav()">☰</a>
+        <div class="rightDiv">
+            <div class="brand">IRIS WEDDING</div>
+            <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+            <a href="invoices.html">
+                <img src="img/credit.svg" height="26">
+            </a>
+        </div>
+      </div>
+    <div class="banner"></div>
+<div class="carousel">
+    <div class="carousel-items">
+        <div class="carousel-item">
+            <img src="img/1.jpg" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="img/2.jfif" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="img/3.jpg" alt="">
+        </div>
+        <div class="carousel-item">
+            <img src="img/4.jpg" alt="">
+        </div>
+    </div>
+    <div class="carousel-controls">
+        <button id="prev"><</button>
+        <button id="next">></button>
+    </div>
+    <div class="pagination-dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+
+    
+    <div>
+        <div class="smallDesc">
+            <h1>OUR OFFERS</h1>
+            <p>See the service and deals that we offer</p>
+        </div>
+    
+        <div class="content">
+            <div class="picture">
+                <img src="img/VendorPic1.png"> 
+            </div>
+            <div class="pictureDesc">
+                <h1>WEDDING ORGANIZER</h1>
+                <h2>Experience a seamless wedding day with our Full Wedding Day Organizer, handling every detail so you can focus on making memories!</h2>
+                <a href="expand.html" class="view">
+                    <p>View more</p>
+                </a>
+            </div>
+        </div>
+        <div class="brek"></div>
+        <div class="content">
+            <div class="pictureDesc">
+                <h1>WEDDING PLANNER</h1>
+                <h2>Bring your dream wedding to life with our planner, who will tailor every detail to match your vision and ensure a flawless celebration!</h2>
+                <a href="expand.html" class="view">
+                    <p>View more</p>
+                </a>
+            </div>
+            <div class="picture">
+                <img src="img/VendorPic2.png"> 
+            </div>
+        </div>
+        <div class="brek"></div>
+        <div class="content">
+            <div class="picture">
+                <img src="img/VendorPic3.jpg"> 
+            </div>
+            <div class="pictureDesc">
+                <h1>WEDDING O. & DECORATION</h1>
+                <h2>Enhance your wedding with our organizer and decoration service, expertly coordinating every detail and crafting stunning designs for you!</h2>
+                <a href="expand.html" class="view">
+                    <p>View more</p>
+                </a>
+    
+            </div></div>
+      
+            </div>
+            <div class="brek"></div>
+            <div class="content">
+                <div class="pictureDesc">
+                    <h1>WEDDING O. & ENTERTAINMENT</h1>
+                    <h2>Make your wedding unforgettable with organizer and entertainment service, coordinating details plus entertainment for guests!</h2>
+                    <a href="expand.html" class="view">
+                        <p>View more</p>
+                    </a>
+                </div>
+                <div class="picture">
+                    <img src="img/VendorPic4.jpg"> 
+                </div>
+            </div>
+            <div class="brek"></div>
+            <div class="content">
+                <div class="picture">
+                    <img src="img/VendorPic5.jpg"> 
+                </div>
+                <div class="pictureDesc">
+                    <h1>WEDDING O. & PHOTO VIDEO</h1>
+                    <h2>Capture every moment of your wedding with our organizer and photo/video service, ensuring seamless coordination while capturing your special day</h2>
+                    <a href="expand.html" class="view">
+                        <p>View more</p>
+                    </a>
+                </div></div>
+                <div class="brek"></div>
+                <div class="content">
+                    <div class="pictureDesc">
+                        <h1>COMPLETE PACKAGE</h1>
+                        <h2>Enjoy the ultimate wedding package with our organizer, decoration, photo/video, and entertainment services, for an unforgettable wedding</h2>
+                        <a href="expand.html" class="view">
+                            <p>View more</p>
+                        </a>
+                    </div>
+                    <div class="picture">
+                        <img src="img/VendorPic6.jpg"> 
+                    </div>
+                </div>
+        </div>
+    
+    </div>
+    <div class="brek"></div>
+    <footer>
+        <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+        <br>
+        <a>Products</a>
+        <a>About Us</a>
+        <a>Help</a>
+        <a>Contact</a>
+            <br><br>
+        <a>Privacy & Cookies</a>
+        <a>Cookies Settings</a>
+        <a href="tnc.html">Terms & Conditions</a>
+            <br><br>
+        <p>© 2024 IrisWedding.com</p>
+    </footer>
+    
+    <script>
+        let mybutton = document.getElementById("myBtn");
+    
+        function topFunction() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    
+        function openNav() {
+          document.getElementById("sidePanel").style.width = "100%";
+        }
+        
+        function closeNav() {
+          document.getElementById("sidePanel").style.width = "0";
+        }
+    
+        function openSearch() {
+      document.getElementById("myOverlay").style.display = "block";
+    }
+    
+    function closeSearch() {
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    </script>
+    <script>
+        let carousel = document.querySelector('.carousel .carousel-items');
+        let items = document.querySelectorAll('.carousel .carousel-items .carousel-item');
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let dots = document.querySelectorAll('.carousel .pagination-dots .dot');
+        
+        let lengthItems = items.length - 1;
+        let active = 0;
+        
+        next.onclick = function() {
+            active = active + 1 <= lengthItems ? active + 1 : 0;
+            reloadCarousel();
+        }
+        
+        prev.onclick = function() {
+            active = active - 1 >= 0 ? active - 1 : lengthItems;
+            reloadCarousel();
+        }
+        
+        let refreshInterval = setInterval(() => { next.click() }, 3000);
+        
+        function reloadCarousel() {
+            carousel.style.left = -items[active].offsetLeft + 'px';
+            
+            let last_active_dot = document.querySelector('.carousel .pagination-dots .dot.active');
+            last_active_dot.classList.remove('active');
+            dots[active].classList.add('active');
+        
+            clearInterval(refreshInterval);
+            refreshInterval = setInterval(() => { next.click() }, 3000);
+        }
+        
+        dots.forEach((dot, key) => {
+            dot.addEventListener('click', () => {
+                active = key;
+                reloadCarousel();
+            });
+        });
+        
+        window.onresize = function(event) {
+            reloadCarousel();
+        };
+    </script>
+    <script src="script.js"></script>
+    
+    </body>
+    
+    </html>

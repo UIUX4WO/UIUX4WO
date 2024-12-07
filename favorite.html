@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite</title>
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+  </head>
+  <style>
+    /* Include the Arcon font */
+    @font-face {
+      font-family: 'Arcon';
+      src: url('path-to-your-font/Arcon-Regular.ttf') format('truetype');
+    }
+
+    /* General styling for card description */
+    .card-description span {
+      font-family: 'Arcon', sans-serif;
+      font-size: 12px;
+      font-weight: normal;
+      color: #333; /* Adjust color if needed */
+      line-height: 1.5;
+    }
+
+    /* Love button style */
+    .love-button {
+      position: absolute; /* Position it absolutely inside the card */
+      top: 7px; /* Adjust this to move the heart closer or further from the top */
+      right: -22px; /* Increased to move the heart further from the right */
+      display: inline-flex; /* Keeps the heart centered */
+      justify-content: center;
+      align-items: center;
+      padding: 4px; /* Smaller padding around the heart */
+      background-color: transparent; /* Keeps background invisible */
+      border-radius: 50%; /* Makes the padding area circular */
+    }
+
+    .love-button svg {
+      transition: fill 0.3s ease;
+    }
+
+    .love-button.active svg {
+      fill: red; /* Change heart color when active */
+    }
+    .card-content {
+      position: relative; /* This allows absolute positioning of the love button */
+    }
+  </style>
+  <body>
+    <a href="chat-iris.html" class="chatButton">Chat</a>
+    <div id="sidePanel" class="sidePanelStyle">
+      <div>
+        <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+    </div>
+      <a href="index.html">Home</a>
+      <a href="package.html">Packages</a>
+      <a href="vendor.html">Vendors</a>
+      <a href="inspo.html">Inspirations</a>
+      <a href="profile.html" class="activeNav">My Account</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="tnc.html">Help</a>
+      <a href="signUp.html">Sign Up</a>
+  </div>
+  
+  <div id="myOverlay" class="overlay">
+    <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+    <div style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" class="overlay-content">
+        <form style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" action="inspo.html">
+            <a href="inspo.html">
+                <button style="text-align: center;" type="button"><i class="fa fa-search"></i></button>
+            </a>
+            <input style="margin: 0;" type="text" placeholder="Search.." name="search">
+        </form>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="recently">Recently Searched</div>
+    <a href="inspo.html" class="recentlySearched">Venue</a>
+    <a href="inspo.html" class="recentlySearched">Wedding Inspiration</a>
+    <a href="inspo.html" class="recentlySearched">What is a good wedding dress</a>
+    <a href="inspo.html" class="recentlySearched">Best entertainment</a>
+</div>
+
+<div class="navbar">
+    <a class="openButton" onclick="openNav()">☰</a>
+    <div class="rightDiv">
+      <div class="brand">IRIS WEDDING</div>
+        <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+        <a href="invoices.html">
+            <img src="img/credit.svg" height="26">
+        </a>
+    </div>
+  </div>
+
+
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="img/fav1.png" alt="Wedding Full Day" />
+      <div class="card-content">
+        <div class="card-header">
+          <div class="card-title">Wedding Organizer Full Day</div>
+          <div class="love-button" onclick="toggleLove(this)">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+            >
+                <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                />
+            </svg>
+        </div>
+        </div>
+        <div class="card-price">IDR 17.000k</div>
+        <div class="card-description">
+          <span
+            >Create a mesmerizing day on your wedding with a full day
+            assist...</span
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="img/fav2.png" alt="Wedding Full Day" />
+      <div class="card-content">
+        <div class="card-header">
+          <div class="card-title">Wedding Organizer & Entertainment</div>
+          <div class="card-actions">
+            <div style="margin: 0;" class="love-button" onclick="toggleLove(this)">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="card-price">IDR 25.000k</div>
+        <div class="card-description">
+          <span
+            >Plan your big day with music and vibes in this premium
+            package...</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+  <br>
+  <a>Products</a>
+  <a>About Us</a>
+  <a>Help</a>
+  <a>Contact</a>
+      <br><br>
+  <a>Privacy & Cookies</a>
+  <a>Cookies Settings</a>
+  <a href="tnc.html">Terms & Conditions</a>
+      <br><br>
+  <p>© 2024 IrisWedding.com</p>
+</footer>
+
+<script>
+  let mybutton = document.getElementById("myBtn");
+
+  function topFunction() {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  }
+
+  function openNav() {
+    document.getElementById("sidePanel").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("sidePanel").style.width = "0";
+  }
+
+  function openSearch() {
+document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSearch() {
+document.getElementById("myOverlay").style.display = "none";
+}
+function toggleLove(button) {
+    button.classList.toggle("active");
+  }
+</script>
+</body>
+</html>

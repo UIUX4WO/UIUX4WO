@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Iris</title>
+    <link
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+  </head>
+  <body>
+    <div id="sidePanel" class="sidePanelStyle">
+      <div>
+        <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+    </div>
+      <a href="index.html">Home</a>
+      <a href="package.html">Packages</a>
+      <a href="vendor.html">Vendors</a>
+      <a href="inspo.html">Inspirations</a>
+      <a href="profile.html">My Account</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="tnc.html">Help</a>
+      <a href="signUp.html">Sign Up</a>
+  </div>
+  
+  <div id="myOverlay" class="overlay">
+      <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+      <div class="overlay-content">
+        <form action="/action_page.php">
+           <button type="submit"><i class="fa fa-search"></i></button>
+          <input type="text" placeholder="Search.." name="search">
+        </form>
+      </div>
+      <div>Recently Searched</div>
+  </div>
+  
+  <div class="navbar">
+    <a class="openButton" onclick="openNav()">☰</a>
+    <div class="rightDiv">
+      <div class="brand">IRIS WEDDING</div>
+        <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+        <a href="invoices.html">
+            <img src="img/credit.svg" height="26">
+        </a>
+    </div>
+  </div>
+    <div class="downloaded2">
+      <div class="contentt">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="img/logo.png" alt="Iris Wedding Logo" />
+        </div>
+
+        <!-- Chat Button -->
+        <a href="#" class="chat-button">Chat Iris</a>
+
+        <!-- Terms and Conditions -->
+        <p class="termss">
+          (By sending this message, I agree the terms and condition as well as
+          the privacy policy in Iris Wedding)
+        </p>
+
+      <div class="foooter">
+        <p class="footer-text">Don’t have WhatsApp yet?</p>
+        <a href="#" class="footer-link">Download</a>
+      </div>
+    </div> </div>
+    <footer>
+      <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+      <br>
+      <a>Products</a>
+      <a>About Us</a>
+      <a>Help</a>
+      <a>Contact</a>
+          <br><br>
+      <a>Privacy & Cookies</a>
+      <a>Cookies Settings</a>
+      <a href="tnc.html">Terms & Conditions</a>
+          <br><br>
+      <p>© 2024 IrisWedding.com</p>
+  </footer>
+    
+    <script>
+      let mybutton = document.getElementById("myBtn");
+    
+      function topFunction() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      }
+    
+      function openNav() {
+        document.getElementById("sidePanel").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("sidePanel").style.width = "0";
+      }
+    
+      function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+    }
+    
+    function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+    }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

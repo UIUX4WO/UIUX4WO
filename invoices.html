@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iris Wedding Mobile Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body style="background-color: #F8F8FF;">
+    <div id="sidePanel" class="sidePanelStyle">
+      <div>
+        <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+    </div>
+      <a href="index.html">Home</a>
+      <a href="package.html">Packages</a>
+      <a href="vendor.html">Vendors</a>
+      <a href="inspo.html">Inspirations</a>
+      <a href="profile.html" class="activeNav">My Account</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="tnc.html">Help</a>
+      <a href="signUp.html">Sign Up</a>
+  </div>
+
+  <div id="myOverlay" class="overlay">
+    <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+    <div style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" class="overlay-content">
+        <form style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" action="inspo.html">
+            <a href="inspo.html">
+                <button style="text-align: center;" type="button"><i class="fa fa-search"></i></button>
+            </a>
+            <input style="margin: 0;" type="text" placeholder="Search.." name="search">
+        </form>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="recently">Recently Searched</div>
+    <a href="inspo.html" class="recentlySearched">Venue</a>
+    <a href="inspo.html" class="recentlySearched">Wedding Inspiration</a>
+    <a href="inspo.html" class="recentlySearched">What is a good wedding dress</a>
+    <a href="inspo.html" class="recentlySearched">Best entertainment</a>
+</div>
+
+<div class="navbar">
+    <a class="openButton" onclick="openNav()">☰</a>
+    <div class="rightDiv">
+      <div class="brand">IRIS WEDDING</div>
+        <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+        <a href="invoices.html">
+            <img src="img/credit.svg" height="26">
+        </a>
+    </div>
+  </div>
+    <style>
+      @font-face {
+        font-family: Arcon;
+        src: url(Arcon-Regular.otf);
+      }
+
+      * {
+        font-family: Arcon;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+      <!-- Title -->
+      <div class="title">
+        <h2>Wedding Organizer Full Day</h2>
+      </div>
+
+      <!-- List Items -->
+      <div style="margin-bottom: 40vh;" class="list">
+        <div class="item">
+          <span>Planning</span>
+          <span>IDR 1.500k</span>
+        </div>
+        <div class="item">
+          <span>Assistant</span>
+          <span>IDR 2.000k</span>
+        </div>
+        <div class="item">
+          <span>Preparation</span>
+          <span>IDR 2.000k</span>
+        </div>
+        <div class="item">
+          <span>Checklist</span>
+          <span>IDR 500k</span>
+        </div>
+        <div class="item">
+          <span>Photo</span>
+          <span>IDR 4.000k</span>
+        </div>
+        <div class="item">
+          <span>Holy matrimony</span>
+          <span>IDR 3.000k</span>
+        </div>
+        <div class="item">
+          <span>Custom tradition</span>
+          <span>IDR 2.500k</span>
+        </div>
+        <div class="item">
+          <span>Make up</span>
+          <span>IDR 1.000k</span>
+        </div>
+        <hr />
+        <div class="item">
+          <span>Administration Fee</span>
+          <span>IDR 500k</span>
+        </div>
+        <div class="item">
+          <span>Sub Total</span>
+          <span>IDR 16.500k</span>
+        </div>
+        <hr />
+        <div class="item total">
+          <span>Total</span>
+          <span>IDR 17.000k</span>
+        </div>
+      </div>
+
+      <!-- Footer Buttons -->
+      <div style="box-shadow: 0px 0px 10px rgba(54, 43, 43, 0.5);" class="footer">
+        <button class="btn chat-btn">
+          <a href="chat-iris.html">Chat Iris </a>
+        </button>
+        <button class="btn pdf-btn">
+          <a onclick="Download()"> Download PDF </a>
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+      <br>
+      <a>Products</a>
+      <a>About Us</a>
+      <a>Help</a>
+      <a>Contact</a>
+          <br><br>
+      <a>Privacy & Cookies</a>
+      <a>Cookies Settings</a>
+      <a href="tnc.html">Terms & Conditions</a>
+          <br><br>
+      <p>© 2024 IrisWedding.com</p>
+  </footer>
+
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <p>Confirm your Download?</p>
+        <p style="margin-bottom: 16px;">Do you want to check your invoice?</p>
+      <button type="button" class="btn cancel" onclick="closeDownload()">Cancel</button>
+        <button type="submit" class="btn">
+          <a href="download-pdf.html">Download</a>
+        </button>
+        
+      </form>
+    </div>
+
+    <script>
+      let mybutton = document.getElementById("myBtn");
+  
+      function topFunction() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      }
+
+      function Download() {
+      document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeDownload() {
+      document.getElementById("myForm").style.display = "none";
+      }
+  
+      function openNav() {
+        document.getElementById("sidePanel").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("sidePanel").style.width = "0";
+      }
+  
+      function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+  <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Iris Wedding Mobile Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body style="background-color: #F8F8FF;">
+    <a href="chat-iris.html" class="chatButton">Chat</a>
+
+    <div id="sidePanel" class="sidePanelStyle">
+      <div>
+        <img style="position: absolute; top: 16px; left: 8px;"src="img/logo.png" class="logoimg">
+        <a href="javascript:void(0)" class="closeButton" onclick="closeNav()" style="border-bottom: 0px;">×</a>
+    </div>
+      <a href="index.html">Home</a>
+      <a href="package.html">Packages</a>
+      <a href="vendor.html">Vendors</a>
+      <a href="inspo.html">Inspirations</a>
+      <a href="profile.html">My Account</a>
+      <a href="FAQ.html" class="activeNav">FAQ</a>
+      <a href="tnc.html">Help</a>
+      <a href="signUp.html">Sign Up</a>
+  </div>
+
+  <div id="myOverlay" class="overlay">
+    <span class="closeSearchBtn" onclick="closeSearch()">×</span>
+    <div style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" class="overlay-content">
+        <form style="box-shadow: 0px 0px 4px rgba(54, 43, 43, 0.2);" action="inspo.html">
+            <a href="inspo.html">
+                <button style="text-align: center;" type="button"><i class="fa fa-search"></i></button>
+            </a>
+            <input style="margin: 0;" type="text" placeholder="Search.." name="search">
+        </form>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="recently">Recently Searched</div>
+    <a href="inspo.html" class="recentlySearched">Venue</a>
+    <a href="inspo.html" class="recentlySearched">Wedding Inspiration</a>
+    <a href="inspo.html" class="recentlySearched">What is a good wedding dress</a>
+    <a href="inspo.html" class="recentlySearched">Best entertainment</a>
+</div>
+
+<div class="navbar">
+    <a class="openButton" onclick="openNav()">☰</a>
+    <div class="rightDiv">
+      <div class="brand">IRIS WEDDING</div>
+        <a class="openSearchBtn" onclick="openSearch()"><img src="img/search.svg" width="23"></a>
+        <a href="invoices.html">
+            <img src="img/credit.svg" height="26">
+        </a>
+    </div>
+  </div>
+ 
+<div style="background-color: #F8F8FF;" class="FAQcontent">
+  <div>
+    <h1>Frequently asked Question:</h1>
+  </div>
+  <div style="background-color: #F8F8FF;">
+  <button style="font-family: descFont;" class="accordion">How does packages work?</button>
+  <div class="panel">
+    <p style="padding: 8px 0;">We provide packages that suits your budget with options from certain vendors such as photography and videography, entertainment, and MUA.</p>
+  </div>
+  
+  <button style="font-family: descFont;" class="accordion">How do I contact Iris Wedding?</button>
+  <div class="panel">
+    <p style="padding: 8px 0;">We're here to help! You can contact Iris Wedding by texting us through whatsApp or email us in IrisWedding@gmail.com. We look forward to hearing from you!</p>
+  </div>
+  
+  <button style="font-family: descFont;" class="accordion">How do I download the invoice?</button>
+  <div class="panel">
+    <p style="padding: 8px 0;">To download your invoice, sign in to your account on our website, go to the 'Invoices' section next to the search button or in your profile page, and click on the 'Download' button</p>
+  </div>
+
+  <button style="font-family: descFont;" class="accordion">Can Iris connect me with other vendors?</button>
+  <div class="panel">
+    <p style="padding: 8px 0;">Absolutely! We have a network of trusted vendors and can help connect you with venues, photographers, and more to suit your needs.</p>
+  </div>
+
+  <button style="font-family: descFont;" class="accordion">Where is Iris official store?</button>
+  <div class="panel">
+    <p style="padding: 8px 0;">Iris's official store is located at 123 Wedding Lane, Suite 200, Cityville. We're open Monday to Sunday from 8 AM to 5 PM.</p>
+  </div>
+
+  </div>
+</div>
+
+<footer>
+  <a onclick="topFunction()" id="myBtn" style="border: 1 px solid #F8F8FF;">Back to top</a>
+  <br>
+  <a>Products</a>
+  <a>About Us</a>
+  <a>Help</a>
+  <a>Contact</a>
+      <br><br>
+  <a>Privacy & Cookies</a>
+  <a>Cookies Settings</a>
+  <a href="tnc.html">Terms & Conditions</a>
+      <br><br>
+  <p>© 2024 IrisWedding.com</p>
+</footer>
+  
+  <script>
+      let mybutton = document.getElementById("myBtn");
+  
+      function topFunction() {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      }
+
+      var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+  
+      function openNav() {
+        document.getElementById("sidePanel").style.width = "100%";
+      }
+      
+      function closeNav() {
+        document.getElementById("sidePanel").style.width = "0";
+      }
+  
+      function openSearch() {
+    document.getElementById("myOverlay").style.display = "block";
+  }
+  
+  function closeSearch() {
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+  <script src="script.js"></script>
+  </body>
+</html>
