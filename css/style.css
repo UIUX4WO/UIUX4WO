@@ -1808,3 +1808,36 @@ hr {
 .form-container .cancel {
   background-color: #e74c3c;
 }
+
+#message {
+  display:none;
+
+  color: #362b2b;
+  position: relative;
+  margin-top: 10px;
+}
+
+#message p{
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -16px;
+  content: "✔";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -16px;
+  content: "✖";
+}
