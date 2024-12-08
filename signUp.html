@@ -72,12 +72,21 @@
       <input type="text" placeholder="Enter Email" name="email" id="emailIn" required>
  
       <div id="notification5" class="notification">*You have to fill this field.</div>
-      <input type="password" placeholder="Enter Password" name="psw" id="pswIn" required>
+      <input type="password" placeholder="Enter Password" name="psw" id="pswIn" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
  
       <div id="notification6" class="notification">*You have to fill this field.</div>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="pswRepeat" required>
+      <div id="notification7" class="notification">Password does not match.</div>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" id="pswRepeat" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
  
       <p><a class="underlined" href="#">Forgot password?</a></p>
+
+      <div id="message">
+        <p style="padding: 32px 0px 12px 0px; font-size: 16px;">Password must contain the following:</p>
+        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+        <p id="number" class="invalid">A <b>number</b></p>
+        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+      </div>
  
       <br><br>
 
@@ -122,23 +131,26 @@
     }
 
     document.getElementById("submitButtonSignUp").onclick = function (event) {
-            event.preventDefault();
-            const name = document.getElementById("name").value;
-            const emailIn = document.getElementById("emailIn").value;
-            const pswIn = document.getElementById("pswIn").value;
-            const pswRepeat = document.getElementById("pswRepeat").value;
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const emailIn = document.getElementById("emailIn").value;
+    const pswIn = document.getElementById("pswIn").value;
+    const pswRepeat = document.getElementById("pswRepeat").value;
 
-            const notification3 = document.getElementById("notification3");
-            const notification4 = document.getElementById("notification4");
-            const notification5 = document.getElementById("notification5");
-            const notification6 = document.getElementById("notification6");
+    const notification3 = document.getElementById("notification3");
+    const notification4 = document.getElementById("notification4");
+    const notification5 = document.getElementById("notification5");
+    const notification6 = document.getElementById("notification6");
+    const notification7 = document.getElementById("notification7");
 
-            notification3.style.display = "none";
-            notification4.style.display = "none";
-            notification5.style.display = "none";
-            notification6.style.display = "none";
+    notification3.style.display = "none";
+    notification4.style.display = "none";
+    notification5.style.display = "none";
+    notification6.style.display = "none";
+    notification7.style.display = "none";
 
-            if (name.trim() === "" && emailIn.trim() === "" && pswIn.trim() === "" && pswRepeat.trim() === "") {
+    if (name.trim() === "" && emailIn.trim() === "" && pswIn.trim() === "" && pswRepeat.trim() === "") {
               notification3.style.display = "block";
               notification4.style.display = "block";
               notification5.style.display = "block";
@@ -186,9 +198,78 @@
             } else if (pswRepeat.trim() === "") {
               notification6.style.display = "block";
             } else {
-                window.location.href = "index.html";
-            }
+
+        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        if (!passwordPattern.test(pswIn)) {
+            notification7.style.display = "block";
+        } else if (pswIn !== pswRepeat) {
+            notification6.style.display = "block";
+        } else {
+            window.location.href = "index.html";
         }
+    }
+}
+
+var myInput = document.getElementById("pswIn");
+var myInputRepeat = document.getElementById("pswRepeat");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+}
+
+myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+}
+
+myInput.onkeyup = function() {
+    validatePassword(myInput);
+    checkPasswordMatch();
+}
+
+myInputRepeat.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+}
+
+myInputRepeat.onblur = function() {
+    document.getElementById("message").style.display = "none";
+}
+
+myInputRepeat.onkeyup = function() {
+    validatePassword(myInputRepeat);
+    checkPasswordMatch();
+}
+
+function validatePassword(input) {
+    var lowerCaseLetters = /[a-z]/g;
+    letter.classList.toggle("valid", input.value.match(lowerCaseLetters));
+    letter.classList.toggle("invalid", !input.value.match(lowerCaseLetters));
+
+    var upperCaseLetters = /[A-Z]/g;
+    capital.classList.toggle("valid", input.value.match(upperCaseLetters));
+    capital.classList.toggle("invalid", !input.value.match(upperCaseLetters));
+
+    var numbers = /[0-9]/g;
+    number.classList.toggle("valid", input.value.match(numbers));
+    number.classList.toggle("invalid", !input.value.match(numbers));
+
+    length.classList.toggle("valid", input.value.length >= 8);
+    length.classList.toggle("invalid", input.value.length < 8);
+}
+
+function checkPasswordMatch() {
+    var pswInValue = myInput.value;
+    var pswRepeatValue = myInputRepeat.value;
+    
+    if (pswInValue !== pswRepeatValue) {
+        notification6.style.display = "block"; // Show mismatch notification
+    } else {
+        notification6.style.display = "none"; // Hide mismatch notification
+    }
+}
 
     function openNav() {
       document.getElementById("sidePanel").style.width = "100%";
