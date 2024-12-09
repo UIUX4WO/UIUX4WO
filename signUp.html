@@ -199,15 +199,25 @@
               notification6.style.display = "block";
             } else {
 
-        const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-        if (!passwordPattern.test(pswIn)) {
-            notification7.style.display = "block";
-        } else if (pswIn !== pswRepeat) {
-            notification6.style.display = "block";
-        } else {
-            window.location.href = "index.html";
-        }
+    const hasLowerCase = (input) => /[a-z]/.test(input);
+    const hasUpperCase = (input) => /[A-Z]/.test(input);
+    const hasNumber = (input) => /[0-9]/.test(input);
+    const isLongEnough = (input) => input.length >= 8;
+
+    if (!hasLowerCase(pswIn)) {
+        notification6.style.display = "block";
+    } else if (!hasUpperCase(pswIn)) {
+        notification6.style.display = "block";
+    } else if (!hasNumber(pswIn)) {
+        notification6.style.display = "block";
+    } else if (!isLongEnough(pswIn)) {
+        notification6.style.display = "block";
+    } else if (pswIn !== pswRepeat) {
+        notification7.style.display = "block";
+    } else {
+        window.location.href = "index.html";
     }
+  }
 }
 
 var myInput = document.getElementById("pswIn");
@@ -265,9 +275,9 @@ function checkPasswordMatch() {
     var pswRepeatValue = myInputRepeat.value;
     
     if (pswInValue !== pswRepeatValue) {
-        notification6.style.display = "block"; // Show mismatch notification
+        notification6.style.display = "block";
     } else {
-        notification6.style.display = "none"; // Hide mismatch notification
+        notification6.style.display = "none";
     }
 }
 
